@@ -1,0 +1,24 @@
+{
+  "generator-jhipster": {
+    "baseName": "OpenDataCollector",
+    "packageName": "com.gerardlc",
+    "packageFolder": "com/gerardlc",
+    "authenticationType": "session",
+    "hibernateCache": "ehcache",
+    "clusteredHttpSession": "no",
+    "websocket": "no",
+    "databaseType": "sql",
+    "devDatabaseType": "mysql",
+    "prodDatabaseType": "mysql",
+    "searchEngine": "no",
+    "useSass": false,
+    "buildTool": "maven",
+    "frontendBuilder": "grunt",
+    "enableTranslation": false,
+    "enableSocialSignIn": false,
+    "rememberMeKey": "df080abad636e87558f541fb2b9b17781f05486e",
+    "testFrameworks": [
+      "gatling"
+    ]
+  }
+}
