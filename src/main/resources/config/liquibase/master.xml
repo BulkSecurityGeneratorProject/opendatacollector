@@ -9,5 +9,7 @@
     <include file="classpath:config/liquibase/changelog/20151207192127_added_entity_Ciudad.xml" relativeToChangelogFile="false"/>
     <include file="classpath:config/liquibase/changelog/20151207192254_added_entity_SubCategoria.xml" relativeToChangelogFile="false"/>
     <include file="classpath:config/liquibase/changelog/20151207192740_added_entity_DataSet.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20151226125540_added_entity_Barrio.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20151226125841_added_entity_MigracionBarrio.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-005 - JHipster will add liquibase changelogs here -->
 </databaseChangeLog>

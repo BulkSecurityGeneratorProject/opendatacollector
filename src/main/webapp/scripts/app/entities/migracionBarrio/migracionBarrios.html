@@ -1,0 +1,61 @@
+<div>
+    <h2>MigracionBarrios</h2>
+    <jh-alert></jh-alert>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <button class="btn btn-primary" ui-sref="migracionBarrio.new">
+                    <span class="glyphicon glyphicon-flash"></span> <span>Create a new MigracionBarrio</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr jh-sort="predicate" ascending="reverse" callback="loadAll()">
+                    <th jh-sort-by="id"><span>ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="numeroPersonas"><span>NumeroPersonas</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="anyo"><span>Anyo</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="barrioOrigen.nombre"><span>barrioOrigen</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="barrioDestino.nombre"><span>barrioDestino</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="migracionBarrio in migracionBarrios track by migracionBarrio.id">
+                    <td><a ui-sref="migracionBarrio.detail({id:migracionBarrio.id})">{{migracionBarrio.id}}</a></td>
+                    <td>{{migracionBarrio.numeroPersonas}}</td>
+                        <td>{{migracionBarrio.anyo | date:'mediumDate'}}</td>
+                    <td>
+                        <a ui-sref="barrio.detail({id:migracionBarrio.barrioOrigen.id})">{{migracionBarrio.barrioOrigen.nombre}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="barrio.detail({id:migracionBarrio.barrioDestino.id})">{{migracionBarrio.barrioDestino.nombre}}</a>
+                    </td>
+                    <td>
+                        <button type="submit"
+                                ui-sref="migracionBarrio.detail({id:migracionBarrio.id})"
+                                class="btn btn-info btn-sm">
+                            <span class="glyphicon glyphicon-eye-open"></span>&nbsp;<span> View</span>
+                        </button>
+                        <button type="submit"
+                                ui-sref="migracionBarrio.edit({id:migracionBarrio.id})"
+                                class="btn btn-primary btn-sm">
+                            <span class="glyphicon glyphicon-pencil"></span>&nbsp;<span> Edit</span>
+                        </button>
+                        <button type="submit"
+                                ui-sref="migracionBarrio.delete({id:migracionBarrio.id})"
+                                class="btn btn-danger btn-sm">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span> Delete</span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center">
+        <uib-pagination class="pagination-sm" total-items="totalItems" ng-model="page" ng-change="loadAll()"></uib-pagination>
+    </div>
+</div>
