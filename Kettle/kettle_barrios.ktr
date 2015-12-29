@@ -145,7 +145,7 @@
     <encoding>UTF-8</encoding>
     <add_to_result_filenames>Y</add_to_result_filenames>
     <file>
-      <name>D&#x3a;&#x5c;Documentos&#x5c;DAM2T&#x5c;opendata_2014_canvisdom-cd &#x28;1&#x29;.csv</name>
+      <name>D&#x3a;&#x5c;Documentos&#x5c;DAM2T&#x5c;opendatacollector&#x5c;Kettle&#x5c;opendata_2014_canvisdom-cd &#x28;1&#x29;.csv</name>
       <filemask/>
       <exclude_filemask/>
       <file_required>N</file_required>
