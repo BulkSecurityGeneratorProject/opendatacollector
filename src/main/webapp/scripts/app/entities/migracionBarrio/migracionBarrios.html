@@ -27,7 +27,7 @@
                 <tr ng-repeat="migracionBarrio in migracionBarrios track by migracionBarrio.id">
                     <td><a ui-sref="migracionBarrio.detail({id:migracionBarrio.id})">{{migracionBarrio.id}}</a></td>
                     <td>{{migracionBarrio.numeroPersonas}}</td>
-                        <td>{{migracionBarrio.anyo | date:'mediumDate'}}</td>
+                    <td>{{migracionBarrio.anyo}}</td>
                     <td>
                         <a ui-sref="barrio.detail({id:migracionBarrio.barrioOrigen.id})">{{migracionBarrio.barrioOrigen.nombre}}</a>
                     </td>

@@ -23,8 +23,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;
-import java.time.LocalDate;
-import java.time.ZoneId;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -47,8 +45,8 @@ public class MigracionBarrioResourceIntTest {
     private static final Integer DEFAULT_NUMERO_PERSONAS = 0;
     private static final Integer UPDATED_NUMERO_PERSONAS = 1;
 
-    private static final LocalDate DEFAULT_ANYO = LocalDate.ofEpochDay(0L);
-    private static final LocalDate UPDATED_ANYO = LocalDate.now(ZoneId.systemDefault());
+    private static final Integer DEFAULT_ANYO = 1;
+    private static final Integer UPDATED_ANYO = 2;
 
     @Inject
     private MigracionBarrioRepository migracionBarrioRepository;
@@ -130,7 +128,7 @@ public class MigracionBarrioResourceIntTest {
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
                 .andExpect(jsonPath("$.[*].id").value(hasItem(migracionBarrio.getId().intValue())))
                 .andExpect(jsonPath("$.[*].numeroPersonas").value(hasItem(DEFAULT_NUMERO_PERSONAS)))
-                .andExpect(jsonPath("$.[*].anyo").value(hasItem(DEFAULT_ANYO.toString())));
+                .andExpect(jsonPath("$.[*].anyo").value(hasItem(DEFAULT_ANYO)));
     }
 
     @Test
@@ -145,7 +143,7 @@ public class MigracionBarrioResourceIntTest {
             .andExpect(content().contentType(MediaType.APPLICATION_JSON))
             .andExpect(jsonPath("$.id").value(migracionBarrio.getId().intValue()))
             .andExpect(jsonPath("$.numeroPersonas").value(DEFAULT_NUMERO_PERSONAS))
-            .andExpect(jsonPath("$.anyo").value(DEFAULT_ANYO.toString()));
+            .andExpect(jsonPath("$.anyo").value(DEFAULT_ANYO));
     }
 
     @Test

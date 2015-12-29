@@ -2,7 +2,6 @@ package com.gerardlc.domain;
 
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
-import java.time.LocalDate;
 
 import javax.persistence.*;
 import javax.validation.constraints.*;
@@ -29,7 +28,7 @@ public class MigracionBarrio implements Serializable {
     private Integer numeroPersonas;
 
     @Column(name = "anyo")
-    private LocalDate anyo;
+    private Integer anyo;
 
     @ManyToOne
     @JoinColumn(name = "barrio_origen_id")
@@ -56,11 +55,11 @@ public class MigracionBarrio implements Serializable {
         this.numeroPersonas = numeroPersonas;
     }
 
-    public LocalDate getAnyo() {
+    public Integer getAnyo() {
         return anyo;
     }
 
-    public void setAnyo(LocalDate anyo) {
+    public void setAnyo(Integer anyo) {
         this.anyo = anyo;
     }
 

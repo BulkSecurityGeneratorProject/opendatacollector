@@ -24,7 +24,7 @@
             <column name="numero_personas" type="integer">
                 <constraints nullable="false" />
             </column>
-            <column name="anyo" type="date"/>
+            <column name="anyo" type="integer"/>
             <column name="barrio_origen_id" type="bigint"/>
             <column name="barrio_destino_id" type="bigint"/>
         </createTable>

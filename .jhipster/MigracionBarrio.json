@@ -29,7 +29,7 @@
         {
             "fieldId": 2,
             "fieldName": "anyo",
-            "fieldType": "LocalDate"
+            "fieldType": "Integer"
         }
     ],
     "changelogDate": "20151226125841",
