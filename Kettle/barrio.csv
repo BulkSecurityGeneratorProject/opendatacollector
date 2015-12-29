@@ -1,0 +1,74 @@
+id;nombre;nombre_csv_origen;nombre_csv_destino
+"1";"El Raval";"1. el Raval";"ELRAVAL"
+"2";"El Barri Gòtic";"2. el Barri Gòtic";"ELBARRIGOTIC"
+"3";"La Barceloneta";3. la Barceloneta;LABARCELONETA
+"4";"Sant Pere, Santa Caterina i la Ribera";4. Sant Pere, Santa Caterina i la Ribera;SANTPERESANTACATERINAILARIBERA
+"5";"El Fort Pienc";5. el Fort Pienc;ELFORTPIENC
+"6";"La Sagrada Família";6. la Sagrada Família;LASAGRADAFAMILIA
+"7";"La Dreta de l'Eixample";7. la Dreta de l Eixample;LADRETADELEIXAMPLE
+"8";"l'Antiga Esquerra de l Eixample";8. l Antiga Esquerra de l Eixample;LANTIGAESQUERRADELEIXAMPLE
+"9";"La Nova Esquerra de l'Eixample";9. la Nova Esquerra de l Eixample;LANOVAESQUERRADELEIXAMPLE
+"10";"Sant Antoni";10. Sant Antoni;SANTANTONI
+"11";"El Poble Sec - Parc Montjuïc";11. el Poble Sec - Parc Montjuïc;ELPOBLESECPARCMONTJUIC
+"12";"La Marina del Prat Vermell - Zona Franca";12. la Marina del Prat Vermell - Zona Franca;LAMARINADELPRATVERMELLZONAFRANCA
+"13";"La Marina de Port";13. la Marina de Port;LAMARINADEPORT
+"14";"La Font de la Guatlla";14. la Font de la Guatlla;LAFONTDELAGUATLLA
+"15";"Hostafrancs";15. Hostafrancs;HOSTAFRANCS
+"16";"La Bordeta";16. la Bordeta;LABORDETA
+"17";"Sants - Badal";17. Sants - Badal;SANTSBADAL
+"18";"Sants";18. Sants;SANTS
+"19";"Les Corts";19. les Corts;LESCORTS
+"20";"La Maternitat i Sant Ramon";20. la Maternitat i Sant Ramon;LAMATERNITATISANTRAMON
+"21";"Pedralbes";21. Pedralbes;PEDRALBES
+"22";"Vallvidrera, el Tibidabo i les Planes";22. Vallvidrera, el Tibidabo i les Planes;VALLVIDRERAELTIBIDABOILESPLANES
+"23";"Sarrià";23. Sarrià;SARRIA
+"24";"Les Tres Torres";24. les Tres Torres;LESTRESTORRES
+"25";"Sant Gervasi - la Bonanova";25. Sant Gervasi - la Bonanova;SANTGERVASILABONANOVA
+"26";"Sant Gervasi - Galvany";26. Sant Gervasi - Galvany;SANTGERVASIGALVANY
+"27";"El Putxet i el Farró";27. el Putxet i el Farró;ELPUTXETIELFARRO
+"28";"Vallcarca i els Penitents";28. Vallcarca i els Penitents;VALLCARCAIELSPENITENTS
+"29";"El Coll";29. el Coll;ELCOLL
+"30";"La Salut";30. la Salut;LASALUT
+"31";"La Vila de Gràcia";31. la Vila de Gràcia;LAVILADEGRACIA
+"32";"El Camp d en Grassot i Gràcia Nova";32. el Camp d en Grassot i Gràcia Nova;ELCAMPDENGRASSOTIGRACIANOVA
+"33";"El Baix Guinardó";33. el Baix Guinardó;ELBAIXGUINARDO
+"34";"Can Baró";34. Can Baró;CANBARO
+"35";"El Guinardó";35. el Guinardó;ELGUINARDO
+"36";"La Font d en Fargues";36. la Font d en Fargues;LAFONTDENFARGUES
+"37";"El Carmel";37. el Carmel;ELCARMEL
+"38";"La Teixonera";38. la Teixonera;LATEIXONERA
+"39";"Sant Genís dels Agudells";39. Sant Genís dels Agudells;SANTGENISDELSAGUDELLS
+"40";"Montbau";40. Montbau;MONTBAU
+"41";"La Vall d Hebron";41. la Vall d Hebron;LAVALLDHEBRON
+"42";"La Clota";42. la Clota;LACLOTA
+"43";"Horta";43. Horta;HORTA
+"44";"Vilapicina i la Torre Llobeta";44. Vilapicina i la Torre Llobeta;VILAPICINAILATORRELLOBETA
+"45";"Porta";45. Porta;PORTA
+"46";"El Turó de la Peira";46. el Turó de la Peira;ELTURODELAPEIRA
+"47";"Can Peguera";47. Can Peguera;CANPEGUERA
+"48";"La Guineueta";48. la Guineueta;LAGUINEUETA
+"49";"Canyelles";49. Canyelles;CANYELLES
+"50";"Les Roquetes";50. les Roquetes;LESROQUETES
+"51";"Verdun";51. Verdun;VERDUN
+"52";"La Prosperitat";52. la Prosperitat;LAPROSPERITAT
+"53";"La Trinitat Nova";53. la Trinitat Nova;LATRINITATNOVA
+"54";"Torre Baró";54. Torre Baró;TORREBARO
+"55";"Ciutat Meridiana";55. Ciutat Meridiana;CIUTATMERIDIANA
+"56";"Vallbona";56. Vallbona;VALLBONA
+"57";"La Trinitat Vella";57. la Trinitat Vella;LATRINITATVELLA
+"58";"Baró de Viver";58. Baró de Viver;BARODEVIVER
+"59";"El Bon Pastor";59. el Bon Pastor;ELBONPASTOR
+"60";"Sant Andreu";60. Sant Andreu;SANTANDREU
+"61";"La Sagrera";61. la Sagrera;LASAGRERA
+"62";"El Congrés i els Indian";62. el Congrés i els Indians;ELCONGRESIELSINDIANS
+"63";"Navas";63. Navas;NAVAS
+"64";"El Camp de l'Arpa del Clot";64. el Camp de l Arpa del Clot;ELCAMPDELARPADELCLOT
+"65";"El Clot";65. el Clot;ELCLOT
+"66";"El Parc i la Llacuna del Poblenou";66. el Parc i la Llacuna del Poblenou;ELPARCILALLACUNADELPOBLENOU
+"67";"La Vila Olímpica del Poblenou";67. la Vila Olímpica del Poblenou;LAVILAOLIMPICADELPOBLENOU
+"68";"El Poblenou";68. el Poblenou;ELPOBLENOU
+"69";"Diagonal Mar i el Front Marítim del Poblenou";69. Diagonal Mar i el Front Marítim del Poblenou;DIAGONALMARIELFRONTMARITIMDELPOBLENOU
+"70";"El Besòs i el Maresme";70. el Besòs i el Maresme;ELBESOSIELMARESME
+"71";"Provençals del Poblenou";71. Provençals del Poblenou;PROVENCALSDELPOBLENOU
+"72";"Sant Martí de Provençals";72. Sant Martí de Provençals;SANTMARTIDEPROVENCALS
+"73";"La Verneda i la Pau";73. la Verneda i la Pau;LAVERNEDAILAPAU
