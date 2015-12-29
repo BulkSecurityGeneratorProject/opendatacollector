@@ -102,8 +102,10 @@
     </attributes>
   </connection>
   <order>
-  <hop> <from>Entrada Fichero de Texto</from><to>obtener id barrio origen</to><enabled>Y</enabled> </hop>
-  <hop> <from>obtener id barrio origen</from><to>Write to log</to><enabled>Y</enabled> </hop>
+  <hop> <from>Entrada Fichero de Texto</from><to>a&#xf1;adir a&#xf1;o</to><enabled>Y</enabled> </hop>
+  <hop> <from>a&#xf1;adir a&#xf1;o</from><to>obtener id barrio origen</to><enabled>Y</enabled> </hop>
+  <hop> <from>obtener id barrio origen</from><to>Select values</to><enabled>Y</enabled> </hop>
+  <hop> <from>Select values</from><to>Write to log</to><enabled>Y</enabled> </hop>
   </order>
   <step>
     <name>Entrada Fichero de Texto</name>
@@ -1337,8 +1339,8 @@
     <sizeFieldName/>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>144</xloc>
-      <yloc>240</yloc>
+      <xloc>80</xloc>
+      <yloc>128</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -1361,235 +1363,13 @@
       <logmessage/>
     <fields>
       <field>
-        <name>&#xfeff;DTE</name>
-        </field>
-      <field>
-        <name>BARRIS</name>
-        </field>
-      <field>
-        <name>BARCELONA</name>
-        </field>
-      <field>
         <name>ELRAVAL</name>
         </field>
       <field>
         <name>ELBARRIGOTIC</name>
         </field>
       <field>
-        <name>LABARCELONETA</name>
-        </field>
-      <field>
-        <name>SANTPERESANTACATERINAILARIBERA</name>
-        </field>
-      <field>
-        <name>ELFORTPIENC</name>
-        </field>
-      <field>
-        <name>LASAGRADAFAMILIA</name>
-        </field>
-      <field>
-        <name>LADRETADELEIXAMPLE</name>
-        </field>
-      <field>
-        <name>LANTIGAESQUERRADELEIXAMPLE</name>
-        </field>
-      <field>
-        <name>LANOVAESQUERRADELEIXAMPLE</name>
-        </field>
-      <field>
-        <name>SANTANTONI</name>
-        </field>
-      <field>
-        <name>ELPOBLESECPARCMONTJUIC</name>
-        </field>
-      <field>
-        <name>LAMARINADELPRATVERMELLZONAFRANCA</name>
-        </field>
-      <field>
-        <name>LAMARINADEPORT</name>
-        </field>
-      <field>
-        <name>LAFONTDELAGUATLLA</name>
-        </field>
-      <field>
-        <name>HOSTAFRANCS</name>
-        </field>
-      <field>
-        <name>LABORDETA</name>
-        </field>
-      <field>
-        <name>SANTSBADAL</name>
-        </field>
-      <field>
-        <name>SANTS</name>
-        </field>
-      <field>
-        <name>LESCORTS</name>
-        </field>
-      <field>
-        <name>LAMATERNITATISANTRAMON</name>
-        </field>
-      <field>
-        <name>PEDRALBES</name>
-        </field>
-      <field>
-        <name>VALLVIDRERAELTIBIDABOILESPLANES</name>
-        </field>
-      <field>
-        <name>SARRIA</name>
-        </field>
-      <field>
-        <name>LESTRESTORRES</name>
-        </field>
-      <field>
-        <name>SANTGERVASILABONANOVA</name>
-        </field>
-      <field>
-        <name>SANTGERVASIGALVANY</name>
-        </field>
-      <field>
-        <name>ELPUTXETIELFARRO</name>
-        </field>
-      <field>
-        <name>VALLCARCAIELSPENITENTS</name>
-        </field>
-      <field>
-        <name>ELCOLL</name>
-        </field>
-      <field>
-        <name>LASALUT</name>
-        </field>
-      <field>
-        <name>LAVILADEGRACIA</name>
-        </field>
-      <field>
-        <name>ELCAMPDENGRASSOTIGRACIANOVA</name>
-        </field>
-      <field>
-        <name>ELBAIXGUINARDO</name>
-        </field>
-      <field>
-        <name>CANBARO</name>
-        </field>
-      <field>
-        <name>ELGUINARDO</name>
-        </field>
-      <field>
-        <name>LAFONTDENFARGUES</name>
-        </field>
-      <field>
-        <name>ELCARMEL</name>
-        </field>
-      <field>
-        <name>LATEIXONERA</name>
-        </field>
-      <field>
-        <name>SANTGENISDELSAGUDELLS</name>
-        </field>
-      <field>
-        <name>MONTBAU</name>
-        </field>
-      <field>
-        <name>LAVALLDHEBRON</name>
-        </field>
-      <field>
-        <name>LACLOTA</name>
-        </field>
-      <field>
-        <name>HORTA</name>
-        </field>
-      <field>
-        <name>VILAPICINAILATORRELLOBETA</name>
-        </field>
-      <field>
-        <name>PORTA</name>
-        </field>
-      <field>
-        <name>ELTURODELAPEIRA</name>
-        </field>
-      <field>
-        <name>CANPEGUERA</name>
-        </field>
-      <field>
-        <name>LAGUINEUETA</name>
-        </field>
-      <field>
-        <name>CANYELLES</name>
-        </field>
-      <field>
-        <name>LESROQUETES</name>
-        </field>
-      <field>
-        <name>VERDUN</name>
-        </field>
-      <field>
-        <name>LAPROSPERITAT</name>
-        </field>
-      <field>
-        <name>LATRINITATNOVA</name>
-        </field>
-      <field>
-        <name>TORREBARO</name>
-        </field>
-      <field>
-        <name>CIUTATMERIDIANA</name>
-        </field>
-      <field>
-        <name>VALLBONA</name>
-        </field>
-      <field>
-        <name>LATRINITATVELLA</name>
-        </field>
-      <field>
-        <name>BARODEVIVER</name>
-        </field>
-      <field>
-        <name>ELBONPASTOR</name>
-        </field>
-      <field>
-        <name>SANTANDREU</name>
-        </field>
-      <field>
-        <name>LASAGRERA</name>
-        </field>
-      <field>
-        <name>ELCONGRESIELSINDIANS</name>
-        </field>
-      <field>
-        <name>NAVAS</name>
-        </field>
-      <field>
-        <name>ELCAMPDELARPADELCLOT</name>
-        </field>
-      <field>
-        <name>ELCLOT</name>
-        </field>
-      <field>
-        <name>ELPARCILALLACUNADELPOBLENOU</name>
-        </field>
-      <field>
-        <name>LAVILAOLIMPICADELPOBLENOU</name>
-        </field>
-      <field>
-        <name>ELPOBLENOU</name>
-        </field>
-      <field>
-        <name>DIAGONALMARIELFRONTMARITIMDELPOBLENOU</name>
-        </field>
-      <field>
-        <name>ELBESOSIELMARESME</name>
-        </field>
-      <field>
-        <name>PROVENCALSDELPOBLENOU</name>
-        </field>
-      <field>
-        <name>SANTMARTIDEPROVENCALS</name>
-        </field>
-      <field>
-        <name>LAVERNEDAILAPAU</name>
-        </field>
-      <field>
-        <name>NOCONSTA</name>
+        <name>anyo</name>
         </field>
       <field>
         <name>idBarrioOrigen</name>
@@ -1597,8 +1377,41 @@
       </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>544</xloc>
-      <yloc>240</yloc>
+      <xloc>640</xloc>
+      <yloc>128</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>a&#xf1;adir a&#xf1;o</name>
+    <type>Constant</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <name>anyo</name>
+        <type>String</type>
+        <format>0000000000000</format>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>2014</nullif>
+        <length>4</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>224</xloc>
+      <yloc>128</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -1607,7 +1420,7 @@
     <name>obtener id barrio origen</name>
     <type>DBLookup</type>
     <description/>
-    <distribute>Y</distribute>
+    <distribute>N</distribute>
     <custom_distribution/>
     <copies>1</copies>
          <partitioning>
@@ -1639,8 +1452,103 @@
     </lookup>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>344</xloc>
-      <yloc>240</yloc>
+      <xloc>368</xloc>
+      <yloc>128</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Select values</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>        <select_unspecified>N</select_unspecified>
+      <remove>        <name>&#xfeff;DTE</name>
+      </remove>      <remove>        <name>BARRIS</name>
+      </remove>      <remove>        <name>BARCELONA</name>
+      </remove>      <remove>        <name>LABARCELONETA</name>
+      </remove>      <remove>        <name>SANTPERESANTACATERINAILARIBERA</name>
+      </remove>      <remove>        <name>ELFORTPIENC</name>
+      </remove>      <remove>        <name>LASAGRADAFAMILIA</name>
+      </remove>      <remove>        <name>LADRETADELEIXAMPLE</name>
+      </remove>      <remove>        <name>LANTIGAESQUERRADELEIXAMPLE</name>
+      </remove>      <remove>        <name>LANOVAESQUERRADELEIXAMPLE</name>
+      </remove>      <remove>        <name>SANTANTONI</name>
+      </remove>      <remove>        <name>ELPOBLESECPARCMONTJUIC</name>
+      </remove>      <remove>        <name>LAMARINADELPRATVERMELLZONAFRANCA</name>
+      </remove>      <remove>        <name>LAMARINADEPORT</name>
+      </remove>      <remove>        <name>LAFONTDELAGUATLLA</name>
+      </remove>      <remove>        <name>HOSTAFRANCS</name>
+      </remove>      <remove>        <name>LABORDETA</name>
+      </remove>      <remove>        <name>SANTSBADAL</name>
+      </remove>      <remove>        <name>SANTS</name>
+      </remove>      <remove>        <name>LESCORTS</name>
+      </remove>      <remove>        <name>LAMATERNITATISANTRAMON</name>
+      </remove>      <remove>        <name>PEDRALBES</name>
+      </remove>      <remove>        <name>VALLVIDRERAELTIBIDABOILESPLANES</name>
+      </remove>      <remove>        <name>SARRIA</name>
+      </remove>      <remove>        <name>LESTRESTORRES</name>
+      </remove>      <remove>        <name>SANTGERVASILABONANOVA</name>
+      </remove>      <remove>        <name>SANTGERVASIGALVANY</name>
+      </remove>      <remove>        <name>ELPUTXETIELFARRO</name>
+      </remove>      <remove>        <name>VALLCARCAIELSPENITENTS</name>
+      </remove>      <remove>        <name>ELCOLL</name>
+      </remove>      <remove>        <name>LASALUT</name>
+      </remove>      <remove>        <name>LAVILADEGRACIA</name>
+      </remove>      <remove>        <name>ELCAMPDENGRASSOTIGRACIANOVA</name>
+      </remove>      <remove>        <name>ELBAIXGUINARDO</name>
+      </remove>      <remove>        <name>CANBARO</name>
+      </remove>      <remove>        <name>ELGUINARDO</name>
+      </remove>      <remove>        <name>LAFONTDENFARGUES</name>
+      </remove>      <remove>        <name>ELCARMEL</name>
+      </remove>      <remove>        <name>LATEIXONERA</name>
+      </remove>      <remove>        <name>SANTGENISDELSAGUDELLS</name>
+      </remove>      <remove>        <name>MONTBAU</name>
+      </remove>      <remove>        <name>LAVALLDHEBRON</name>
+      </remove>      <remove>        <name>LACLOTA</name>
+      </remove>      <remove>        <name>HORTA</name>
+      </remove>      <remove>        <name>VILAPICINAILATORRELLOBETA</name>
+      </remove>      <remove>        <name>PORTA</name>
+      </remove>      <remove>        <name>ELTURODELAPEIRA</name>
+      </remove>      <remove>        <name>CANPEGUERA</name>
+      </remove>      <remove>        <name>LAGUINEUETA</name>
+      </remove>      <remove>        <name>CANYELLES</name>
+      </remove>      <remove>        <name>LESROQUETES</name>
+      </remove>      <remove>        <name>VERDUN</name>
+      </remove>      <remove>        <name>LAPROSPERITAT</name>
+      </remove>      <remove>        <name>LATRINITATNOVA</name>
+      </remove>      <remove>        <name>TORREBARO</name>
+      </remove>      <remove>        <name>CIUTATMERIDIANA</name>
+      </remove>      <remove>        <name>VALLBONA</name>
+      </remove>      <remove>        <name>LATRINITATVELLA</name>
+      </remove>      <remove>        <name>BARODEVIVER</name>
+      </remove>      <remove>        <name>ELBONPASTOR</name>
+      </remove>      <remove>        <name>SANTANDREU</name>
+      </remove>      <remove>        <name>LASAGRERA</name>
+      </remove>      <remove>        <name>ELCONGRESIELSINDIANS</name>
+      </remove>      <remove>        <name>NAVAS</name>
+      </remove>      <remove>        <name>ELCAMPDELARPADELCLOT</name>
+      </remove>      <remove>        <name>ELCLOT</name>
+      </remove>      <remove>        <name>ELPARCILALLACUNADELPOBLENOU</name>
+      </remove>      <remove>        <name>LAVILAOLIMPICADELPOBLENOU</name>
+      </remove>      <remove>        <name>ELPOBLENOU</name>
+      </remove>      <remove>        <name>DIAGONALMARIELFRONTMARITIMDELPOBLENOU</name>
+      </remove>      <remove>        <name>ELBESOSIELMARESME</name>
+      </remove>      <remove>        <name>PROVENCALSDELPOBLENOU</name>
+      </remove>      <remove>        <name>SANTMARTIDEPROVENCALS</name>
+      </remove>      <remove>        <name>LAVERNEDAILAPAU</name>
+      </remove>      <remove>        <name>NOCONSTA</name>
+      </remove>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>480</xloc>
+      <yloc>128</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
