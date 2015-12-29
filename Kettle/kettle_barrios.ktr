@@ -102,17 +102,17 @@
     </attributes>
   </connection>
   <order>
-  <hop> <from>Entrada Fichero de Texto</from><to>a&#xf1;adir a&#xf1;o</to><enabled>Y</enabled> </hop>
+  <hop> <from>csv migraciones domicilio</from><to>a&#xf1;adir a&#xf1;o</to><enabled>Y</enabled> </hop>
   <hop> <from>a&#xf1;adir a&#xf1;o</from><to>obtener id barrio origen</to><enabled>Y</enabled> </hop>
-  <hop> <from>obtener id barrio origen</from><to>Select values</to><enabled>Y</enabled> </hop>
-  <hop> <from>Select values</from><to>Row Normaliser</to><enabled>Y</enabled> </hop>
-  <hop> <from>Row Normaliser</from><to>Database lookup</to><enabled>Y</enabled> </hop>
-  <hop> <from>Select values 2</from><to>Write to log 2</to><enabled>Y</enabled> </hop>
-  <hop> <from>Database lookup</from><to>Select values 2</to><enabled>Y</enabled> </hop>
-  <hop> <from>Write to log 2</from><to>Table output</to><enabled>Y</enabled> </hop>
+  <hop> <from>obtener id barrio origen</from><to>borrar DTE y BARRIS</to><enabled>Y</enabled> </hop>
+  <hop> <from>borrar DTE y BARRIS</from><to>Normalizer por cada barrio</to><enabled>Y</enabled> </hop>
+  <hop> <from>Normalizer por cada barrio</from><to>obtener id destino</to><enabled>Y</enabled> </hop>
+  <hop> <from>borrar nombre barrio dest</from><to>Write to log 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>obtener id destino</from><to>borrar nombre barrio dest</to><enabled>Y</enabled> </hop>
+  <hop> <from>Write to log 2</from><to>insert en tabla migracion_barrio</to><enabled>Y</enabled> </hop>
   </order>
   <step>
-    <name>Database lookup</name>
+    <name>obtener id destino</name>
     <type>DBLookup</type>
     <description/>
     <distribute>Y</distribute>
@@ -147,14 +147,14 @@
     </lookup>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>624</xloc>
-      <yloc>128</yloc>
+      <xloc>672</xloc>
+      <yloc>96</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
 
   <step>
-    <name>Entrada Fichero de Texto</name>
+    <name>csv migraciones domicilio</name>
     <type>TextFileInput</type>
     <description/>
     <distribute>Y</distribute>
@@ -1392,7 +1392,7 @@
     </step>
 
   <step>
-    <name>Row Normaliser</name>
+    <name>Normalizer por cada barrio</name>
     <type>Normaliser</type>
     <description/>
     <distribute>Y</distribute>
@@ -1630,14 +1630,14 @@
         <norm>numero_personas</norm>
         </field>      </fields>     <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>528</xloc>
+      <xloc>576</xloc>
       <yloc>128</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
 
   <step>
-    <name>Select values</name>
+    <name>borrar DTE y BARRIS</name>
     <type>SelectValues</type>
     <description/>
     <distribute>Y</distribute>
@@ -1659,7 +1659,7 @@
     </step>
 
   <step>
-    <name>Select values 2</name>
+    <name>borrar nombre barrio dest</name>
     <type>SelectValues</type>
     <description/>
     <distribute>Y</distribute>
@@ -1673,7 +1673,61 @@
       <remove>        <name>typefield</name>
       </remove>    </fields>     <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>752</xloc>
+      <xloc>832</xloc>
+      <yloc>128</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>insert en tabla migracion_barrio</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>opendatacollector</connection>
+    <schema/>
+    <table>migracion_barrio</table>
+    <commit>1000</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+        <field>
+          <column_name>anyo</column_name>
+          <stream_name>anyo</stream_name>
+        </field>
+        <field>
+          <column_name>barrio_origen_id</column_name>
+          <stream_name>idBarrioOrigen</stream_name>
+        </field>
+        <field>
+          <column_name>numero_personas</column_name>
+          <stream_name>numero_personas</stream_name>
+        </field>
+        <field>
+          <column_name>barrio_destino_id</column_name>
+          <stream_name>idBarrioDestino</stream_name>
+        </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1088</xloc>
       <yloc>128</yloc>
       <draw>Y</draw>
       </GUI>
@@ -1711,8 +1765,8 @@
       </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>864</xloc>
-      <yloc>128</yloc>
+      <xloc>944</xloc>
+      <yloc>160</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -1787,61 +1841,7 @@
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
       <xloc>304</xloc>
-      <yloc>128</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>Table output</name>
-    <type>TableOutput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <connection>opendatacollector</connection>
-    <schema/>
-    <table>migracion_barrio</table>
-    <commit>1000</commit>
-    <truncate>N</truncate>
-    <ignore_errors>N</ignore_errors>
-    <use_batch>Y</use_batch>
-    <specify_fields>Y</specify_fields>
-    <partitioning_enabled>N</partitioning_enabled>
-    <partitioning_field/>
-    <partitioning_daily>N</partitioning_daily>
-    <partitioning_monthly>Y</partitioning_monthly>
-    <tablename_in_field>N</tablename_in_field>
-    <tablename_field/>
-    <tablename_in_table>Y</tablename_in_table>
-    <return_keys>N</return_keys>
-    <return_field/>
-    <fields>
-        <field>
-          <column_name>anyo</column_name>
-          <stream_name>anyo</stream_name>
-        </field>
-        <field>
-          <column_name>barrio_origen_id</column_name>
-          <stream_name>idBarrioOrigen</stream_name>
-        </field>
-        <field>
-          <column_name>numero_personas</column_name>
-          <stream_name>numero_personas</stream_name>
-        </field>
-        <field>
-          <column_name>barrio_destino_id</column_name>
-          <stream_name>idBarrioDestino</stream_name>
-        </field>
-    </fields>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>1064</xloc>
-      <yloc>128</yloc>
+      <yloc>96</yloc>
       <draw>Y</draw>
       </GUI>
     </step>

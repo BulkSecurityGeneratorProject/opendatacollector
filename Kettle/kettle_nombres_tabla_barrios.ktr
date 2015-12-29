@@ -102,10 +102,10 @@
     </attributes>
   </connection>
   <order>
-  <hop> <from>Text file input</from><to>Table output</to><enabled>Y</enabled> </hop>
+  <hop> <from>csv nombre barrios</from><to>insert en tabla barrios</to><enabled>Y</enabled> </hop>
   </order>
   <step>
-    <name>Text file input</name>
+    <name>csv nombre barrios</name>
     <type>TextFileInput</type>
     <description/>
     <distribute>Y</distribute>
@@ -241,14 +241,14 @@
     <sizeFieldName/>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>208</xloc>
-      <yloc>224</yloc>
+      <xloc>224</xloc>
+      <yloc>80</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
 
   <step>
-    <name>Table output</name>
+    <name>insert en tabla barrios</name>
     <type>TableOutput</type>
     <description/>
     <distribute>Y</distribute>
@@ -295,8 +295,8 @@
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>480</xloc>
-      <yloc>224</yloc>
+      <xloc>496</xloc>
+      <yloc>80</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
