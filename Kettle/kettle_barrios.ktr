@@ -112,8 +112,8 @@
   <hop> <from>Write to log 2</from><to>insert en tabla migracion_barrio</to><enabled>Y</enabled> </hop>
   </order>
   <step>
-    <name>obtener id destino</name>
-    <type>DBLookup</type>
+    <name>Normalizer por cada barrio</name>
+    <type>Normaliser</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -122,33 +122,350 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>opendatacollector</connection>
-    <cache>N</cache>
-    <cache_load_all>N</cache_load_all>
-    <cache_size>0</cache_size>
-    <lookup>
-      <schema/>
-      <table>barrio</table>
-      <orderby/>
-      <fail_on_multiple>Y</fail_on_multiple>
-      <eat_row_on_failure>Y</eat_row_on_failure>
-      <key>
-        <name>typefield</name>
-        <field>nombre_csv_destino</field>
-        <condition>&#x3d;</condition>
-        <name2/>
-      </key>
-      <value>
-        <name>id</name>
-        <rename>idBarrioDestino</rename>
-        <default/>
-        <type>None</type>
-      </value>
-    </lookup>
+   <typefield>typefield</typefield>
+    <fields>      <field>        <name>BARCELONA</name>
+        <value>BARCELONA</value>
+        <norm>numero_personas</norm>
+        </field>      <field>        <name>ELRAVAL</name>
+        <value>ELRAVAL</value>
+        <norm>numero_personas</norm>
+        </field>      <field>        <name>ELBARRIGOTIC</name>
+        <value>ELBARRIGOTIC</value>
+        <norm>numero_personas</norm>
+        </field>      <field>        <name>LABARCELONETA</name>
+        <value>LABARCELONETA</value>
+        <norm>numero_personas</norm>
+        </field>      <field>        <name>SANTPERESANTACATERINAILARIBERA</name>
+        <value>SANTPERESANTACATERINAILARIBERA</value>
+        <norm>numero_personas</norm>
+        </field>      <field>        <name>ELFORTPIENC</name>
+        <value>ELFORTPIENC</value>
+        <norm>numero_personas</norm>
+        </field>      <field>        <name>LASAGRADAFAMILIA</name>
+        <value>LASAGRADAFAMILIA</value>
+        <norm>numero_personas</norm>
+        </field>      <field>        <name>LADRETADELEIXAMPLE</name>
+        <value>LADRETADELEIXAMPLE</value>
+        <norm>numero_personas</norm>
+        </field>      <field>        <name>LANTIGAESQUERRADELEIXAMPLE</name>
+        <value>LANTIGAESQUERRADELEIXAMPLE</value>
+        <norm>numero_personas</norm>
+        </field>      <field>        <name>LANOVAESQUERRADELEIXAMPLE</name>
+        <value>LANOVAESQUERRADELEIXAMPLE</value>
+        <norm>numero_personas</norm>
+        </field>      <field>        <name>SANTANTONI</name>
+        <value>SANTANTONI</value>
+        <norm>numero_personas</norm>
+        </field>      <field>        <name>ELPOBLESECPARCMONTJUIC</name>
+        <value>ELPOBLESECPARCMONTJUIC</value>
+        <norm>numero_personas</norm>
+        </field>      <field>        <name>LAMARINADELPRATVERMELLZONAFRANCA</name>
+        <value>LAMARINADELPRATVERMELLZONAFRANCA</value>
+        <norm>numero_personas</norm>
+        </field>      <field>        <name>LAMARINADEPORT</name>
+        <value>LAMARINADEPORT</value>
+        <norm>numero_personas</norm>
+        </field>      <field>        <name>LAFONTDELAGUATLLA</name>
+        <value>LAFONTDELAGUATLLA</value>
+        <norm>numero_personas</norm>
+        </field>      <field>        <name>HOSTAFRANCS</name>
+        <value>HOSTAFRANCS</value>
+        <norm>numero_personas</norm>
+        </field>      <field>        <name>LABORDETA</name>
+        <value>LABORDETA</value>
+        <norm>numero_personas</norm>
+        </field>      <field>        <name>SANTSBADAL</name>
+        <value>SANTSBADAL</value>
+        <norm>numero_personas</norm>
+        </field>      <field>        <name>SANTS</name>
+        <value>SANTS</value>
+        <norm>numero_personas</norm>
+        </field>      <field>        <name>LESCORTS</name>
+        <value>LESCORTS</value>
+        <norm>numero_personas</norm>
+        </field>      <field>        <name>LAMATERNITATISANTRAMON</name>
+        <value>LAMATERNITATISANTRAMON</value>
+        <norm>numero_personas</norm>
+        </field>      <field>        <name>PEDRALBES</name>
+        <value>PEDRALBES</value>
+        <norm>numero_personas</norm>
+        </field>      <field>        <name>VALLVIDRERAELTIBIDABOILESPLANES</name>
+        <value>VALLVIDRERAELTIBIDABOILESPLANES</value>
+        <norm>numero_personas</norm>
+        </field>      <field>        <name>SARRIA</name>
+        <value>SARRIA</value>
+        <norm>numero_personas</norm>
+        </field>      <field>        <name>LESTRESTORRES</name>
+        <value>LESTRESTORRES</value>
+        <norm>numero_personas</norm>
+        </field>      <field>        <name>SANTGERVASILABONANOVA</name>
+        <value>SANTGERVASILABONANOVA</value>
+        <norm>numero_personas</norm>
+        </field>      <field>        <name>SANTGERVASIGALVANY</name>
+        <value>SANTGERVASIGALVANY</value>
+        <norm>numero_personas</norm>
+        </field>      <field>        <name>ELPUTXETIELFARRO</name>
+        <value>ELPUTXETIELFARRO</value>
+        <norm>numero_personas</norm>
+        </field>      <field>        <name>VALLCARCAIELSPENITENTS</name>
+        <value>VALLCARCAIELSPENITENTS</value>
+        <norm>numero_personas</norm>
+        </field>      <field>        <name>ELCOLL</name>
+        <value>ELCOLL</value>
+        <norm>numero_personas</norm>
+        </field>      <field>        <name>LASALUT</name>
+        <value>LASALUT</value>
+        <norm>numero_personas</norm>
+        </field>      <field>        <name>LAVILADEGRACIA</name>
+        <value>LAVILADEGRACIA</value>
+        <norm>numero_personas</norm>
+        </field>      <field>        <name>ELCAMPDENGRASSOTIGRACIANOVA</name>
+        <value>ELCAMPDENGRASSOTIGRACIANOVA</value>
+        <norm>numero_personas</norm>
+        </field>      <field>        <name>ELBAIXGUINARDO</name>
+        <value>ELBAIXGUINARDO</value>
+        <norm>numero_personas</norm>
+        </field>      <field>        <name>CANBARO</name>
+        <value>CANBARO</value>
+        <norm>numero_personas</norm>
+        </field>      <field>        <name>ELGUINARDO</name>
+        <value>ELGUINARDO</value>
+        <norm>numero_personas</norm>
+        </field>      <field>        <name>LAFONTDENFARGUES</name>
+        <value>LAFONTDENFARGUES</value>
+        <norm>numero_personas</norm>
+        </field>      <field>        <name>ELCARMEL</name>
+        <value>ELCARMEL</value>
+        <norm>numero_personas</norm>
+        </field>      <field>        <name>LATEIXONERA</name>
+        <value>LATEIXONERA</value>
+        <norm>numero_personas</norm>
+        </field>      <field>        <name>SANTGENISDELSAGUDELLS</name>
+        <value>SANTGENISDELSAGUDELLS</value>
+        <norm>numero_personas</norm>
+        </field>      <field>        <name>MONTBAU</name>
+        <value>MONTBAU</value>
+        <norm>numero_personas</norm>
+        </field>      <field>        <name>LAVALLDHEBRON</name>
+        <value>LAVALLDHEBRON</value>
+        <norm>numero_personas</norm>
+        </field>      <field>        <name>LACLOTA</name>
+        <value>LACLOTA</value>
+        <norm>numero_personas</norm>
+        </field>      <field>        <name>HORTA</name>
+        <value>HORTA</value>
+        <norm>numero_personas</norm>
+        </field>      <field>        <name>VILAPICINAILATORRELLOBETA</name>
+        <value>VILAPICINAILATORRELLOBETA</value>
+        <norm>numero_personas</norm>
+        </field>      <field>        <name>PORTA</name>
+        <value>PORTA</value>
+        <norm>numero_personas</norm>
+        </field>      <field>        <name>ELTURODELAPEIRA</name>
+        <value>ELTURODELAPEIRA</value>
+        <norm>numero_personas</norm>
+        </field>      <field>        <name>CANPEGUERA</name>
+        <value>CANPEGUERA</value>
+        <norm>numero_personas</norm>
+        </field>      <field>        <name>LAGUINEUETA</name>
+        <value>LAGUINEUETA</value>
+        <norm>numero_personas</norm>
+        </field>      <field>        <name>CANYELLES</name>
+        <value>CANYELLES</value>
+        <norm>numero_personas</norm>
+        </field>      <field>        <name>LESROQUETES</name>
+        <value>LESROQUETES</value>
+        <norm>numero_personas</norm>
+        </field>      <field>        <name>VERDUN</name>
+        <value>VERDUN</value>
+        <norm>numero_personas</norm>
+        </field>      <field>        <name>LAPROSPERITAT</name>
+        <value>LAPROSPERITAT</value>
+        <norm>numero_personas</norm>
+        </field>      <field>        <name>LATRINITATNOVA</name>
+        <value>LATRINITATNOVA</value>
+        <norm>numero_personas</norm>
+        </field>      <field>        <name>TORREBARO</name>
+        <value>TORREBARO</value>
+        <norm>numero_personas</norm>
+        </field>      <field>        <name>CIUTATMERIDIANA</name>
+        <value>CIUTATMERIDIANA</value>
+        <norm>numero_personas</norm>
+        </field>      <field>        <name>VALLBONA</name>
+        <value>VALLBONA</value>
+        <norm>numero_personas</norm>
+        </field>      <field>        <name>LATRINITATVELLA</name>
+        <value>LATRINITATVELLA</value>
+        <norm>numero_personas</norm>
+        </field>      <field>        <name>BARODEVIVER</name>
+        <value>BARODEVIVER</value>
+        <norm>numero_personas</norm>
+        </field>      <field>        <name>ELBONPASTOR</name>
+        <value>ELBONPASTOR</value>
+        <norm>numero_personas</norm>
+        </field>      <field>        <name>SANTANDREU</name>
+        <value>SANTANDREU</value>
+        <norm>numero_personas</norm>
+        </field>      <field>        <name>LASAGRERA</name>
+        <value>LASAGRERA</value>
+        <norm>numero_personas</norm>
+        </field>      <field>        <name>ELCONGRESIELSINDIANS</name>
+        <value>ELCONGRESIELSINDIANS</value>
+        <norm>numero_personas</norm>
+        </field>      <field>        <name>NAVAS</name>
+        <value>NAVAS</value>
+        <norm>numero_personas</norm>
+        </field>      <field>        <name>ELCAMPDELARPADELCLOT</name>
+        <value>ELCAMPDELARPADELCLOT</value>
+        <norm>numero_personas</norm>
+        </field>      <field>        <name>ELCLOT</name>
+        <value>ELCLOT</value>
+        <norm>numero_personas</norm>
+        </field>      <field>        <name>ELPARCILALLACUNADELPOBLENOU</name>
+        <value>ELPARCILALLACUNADELPOBLENOU</value>
+        <norm>numero_personas</norm>
+        </field>      <field>        <name>LAVILAOLIMPICADELPOBLENOU</name>
+        <value>LAVILAOLIMPICADELPOBLENOU</value>
+        <norm>numero_personas</norm>
+        </field>      <field>        <name>ELPOBLENOU</name>
+        <value>ELPOBLENOU</value>
+        <norm>numero_personas</norm>
+        </field>      <field>        <name>DIAGONALMARIELFRONTMARITIMDELPOBLENOU</name>
+        <value>DIAGONALMARIELFRONTMARITIMDELPOBLENOU</value>
+        <norm>numero_personas</norm>
+        </field>      <field>        <name>ELBESOSIELMARESME</name>
+        <value>ELBESOSIELMARESME</value>
+        <norm>numero_personas</norm>
+        </field>      <field>        <name>PROVENCALSDELPOBLENOU</name>
+        <value>PROVENCALSDELPOBLENOU</value>
+        <norm>numero_personas</norm>
+        </field>      <field>        <name>SANTMARTIDEPROVENCALS</name>
+        <value>SANTMARTIDEPROVENCALS</value>
+        <norm>numero_personas</norm>
+        </field>      <field>        <name>LAVERNEDAILAPAU</name>
+        <value>LAVERNEDAILAPAU</value>
+        <norm>numero_personas</norm>
+        </field>      <field>        <name>NOCONSTA</name>
+        <value>NOCONSTA</value>
+        <norm>numero_personas</norm>
+        </field>      </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>576</xloc>
+      <yloc>128</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Write to log 2</name>
+    <type>WriteToLog</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <loglevel>log_level_basic</loglevel>
+      <displayHeader>Y</displayHeader>
+      <limitRows>N</limitRows>
+      <limitRowsNumber>0</limitRowsNumber>
+      <logmessage/>
+    <fields>
+      <field>
+        <name>anyo</name>
+        </field>
+      <field>
+        <name>idBarrioOrigen</name>
+        </field>
+      <field>
+        <name>numero_personas</name>
+        </field>
+      <field>
+        <name>idBarrioDestino</name>
+        </field>
+      </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>672</xloc>
-      <yloc>96</yloc>
+      <xloc>944</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>a&#xf1;adir a&#xf1;o</name>
+    <type>Constant</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <name>anyo</name>
+        <type>Integer</type>
+        <format>0000000000000</format>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>2014</nullif>
+        <length>4</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>192</xloc>
+      <yloc>128</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>borrar DTE y BARRIS</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>        <select_unspecified>N</select_unspecified>
+      <remove>        <name>&#xfeff;DTE</name>
+      </remove>      <remove>        <name>BARRIS</name>
+      </remove>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>432</xloc>
+      <yloc>128</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>borrar nombre barrio dest</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>        <select_unspecified>N</select_unspecified>
+      <remove>        <name>typefield</name>
+      </remove>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>832</xloc>
+      <yloc>128</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -191,7 +508,7 @@
     <encoding>UTF-8</encoding>
     <add_to_result_filenames>Y</add_to_result_filenames>
     <file>
-      <name>D&#x3a;&#x5c;Documentos&#x5c;DAM2T&#x5c;opendatacollector&#x5c;Kettle&#x5c;opendata_2014_canvisdom-cd &#x28;1&#x29;.csv</name>
+      <name>C&#x3a;&#x5c;Users&#x5c;gerard&#x5c;Documents&#x5c;opendatacollector&#x5c;opendatacollector&#x5c;Kettle&#x5c;opendata_2014_canvisdom-cd &#x28;1&#x29;.csv</name>
       <filemask/>
       <exclude_filemask/>
       <file_required>N</file_required>
@@ -1392,294 +1709,6 @@
     </step>
 
   <step>
-    <name>Normalizer por cada barrio</name>
-    <type>Normaliser</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-   <typefield>typefield</typefield>
-    <fields>      <field>        <name>BARCELONA</name>
-        <value>BARCELONA</value>
-        <norm>numero_personas</norm>
-        </field>      <field>        <name>ELRAVAL</name>
-        <value>ELRAVAL</value>
-        <norm>numero_personas</norm>
-        </field>      <field>        <name>ELBARRIGOTIC</name>
-        <value>ELBARRIGOTIC</value>
-        <norm>numero_personas</norm>
-        </field>      <field>        <name>LABARCELONETA</name>
-        <value>LABARCELONETA</value>
-        <norm>numero_personas</norm>
-        </field>      <field>        <name>SANTPERESANTACATERINAILARIBERA</name>
-        <value>SANTPERESANTACATERINAILARIBERA</value>
-        <norm>numero_personas</norm>
-        </field>      <field>        <name>ELFORTPIENC</name>
-        <value>ELFORTPIENC</value>
-        <norm>numero_personas</norm>
-        </field>      <field>        <name>LASAGRADAFAMILIA</name>
-        <value>LASAGRADAFAMILIA</value>
-        <norm>numero_personas</norm>
-        </field>      <field>        <name>LADRETADELEIXAMPLE</name>
-        <value>LADRETADELEIXAMPLE</value>
-        <norm>numero_personas</norm>
-        </field>      <field>        <name>LANTIGAESQUERRADELEIXAMPLE</name>
-        <value>LANTIGAESQUERRADELEIXAMPLE</value>
-        <norm>numero_personas</norm>
-        </field>      <field>        <name>LANOVAESQUERRADELEIXAMPLE</name>
-        <value>LANOVAESQUERRADELEIXAMPLE</value>
-        <norm>numero_personas</norm>
-        </field>      <field>        <name>SANTANTONI</name>
-        <value>SANTANTONI</value>
-        <norm>numero_personas</norm>
-        </field>      <field>        <name>ELPOBLESECPARCMONTJUIC</name>
-        <value>ELPOBLESECPARCMONTJUIC</value>
-        <norm>numero_personas</norm>
-        </field>      <field>        <name>LAMARINADELPRATVERMELLZONAFRANCA</name>
-        <value>LAMARINADELPRATVERMELLZONAFRANCA</value>
-        <norm>numero_personas</norm>
-        </field>      <field>        <name>LAMARINADEPORT</name>
-        <value>LAMARINADEPORT</value>
-        <norm>numero_personas</norm>
-        </field>      <field>        <name>LAFONTDELAGUATLLA</name>
-        <value>LAFONTDELAGUATLLA</value>
-        <norm>numero_personas</norm>
-        </field>      <field>        <name>HOSTAFRANCS</name>
-        <value>HOSTAFRANCS</value>
-        <norm>numero_personas</norm>
-        </field>      <field>        <name>LABORDETA</name>
-        <value>LABORDETA</value>
-        <norm>numero_personas</norm>
-        </field>      <field>        <name>SANTSBADAL</name>
-        <value>SANTSBADAL</value>
-        <norm>numero_personas</norm>
-        </field>      <field>        <name>SANTS</name>
-        <value>SANTS</value>
-        <norm>numero_personas</norm>
-        </field>      <field>        <name>LESCORTS</name>
-        <value>LESCORTS</value>
-        <norm>numero_personas</norm>
-        </field>      <field>        <name>LAMATERNITATISANTRAMON</name>
-        <value>LAMATERNITATISANTRAMON</value>
-        <norm>numero_personas</norm>
-        </field>      <field>        <name>PEDRALBES</name>
-        <value>PEDRALBES</value>
-        <norm>numero_personas</norm>
-        </field>      <field>        <name>VALLVIDRERAELTIBIDABOILESPLANES</name>
-        <value>VALLVIDRERAELTIBIDABOILESPLANES</value>
-        <norm>numero_personas</norm>
-        </field>      <field>        <name>SARRIA</name>
-        <value>SARRIA</value>
-        <norm>numero_personas</norm>
-        </field>      <field>        <name>LESTRESTORRES</name>
-        <value>LESTRESTORRES</value>
-        <norm>numero_personas</norm>
-        </field>      <field>        <name>SANTGERVASILABONANOVA</name>
-        <value>SANTGERVASILABONANOVA</value>
-        <norm>numero_personas</norm>
-        </field>      <field>        <name>SANTGERVASIGALVANY</name>
-        <value>SANTGERVASIGALVANY</value>
-        <norm>numero_personas</norm>
-        </field>      <field>        <name>ELPUTXETIELFARRO</name>
-        <value>ELPUTXETIELFARRO</value>
-        <norm>numero_personas</norm>
-        </field>      <field>        <name>VALLCARCAIELSPENITENTS</name>
-        <value>VALLCARCAIELSPENITENTS</value>
-        <norm>numero_personas</norm>
-        </field>      <field>        <name>ELCOLL</name>
-        <value>ELCOLL</value>
-        <norm>numero_personas</norm>
-        </field>      <field>        <name>LASALUT</name>
-        <value>LASALUT</value>
-        <norm>numero_personas</norm>
-        </field>      <field>        <name>LAVILADEGRACIA</name>
-        <value>LAVILADEGRACIA</value>
-        <norm>numero_personas</norm>
-        </field>      <field>        <name>ELCAMPDENGRASSOTIGRACIANOVA</name>
-        <value>ELCAMPDENGRASSOTIGRACIANOVA</value>
-        <norm>numero_personas</norm>
-        </field>      <field>        <name>ELBAIXGUINARDO</name>
-        <value>ELBAIXGUINARDO</value>
-        <norm>numero_personas</norm>
-        </field>      <field>        <name>CANBARO</name>
-        <value>CANBARO</value>
-        <norm>numero_personas</norm>
-        </field>      <field>        <name>ELGUINARDO</name>
-        <value>ELGUINARDO</value>
-        <norm>numero_personas</norm>
-        </field>      <field>        <name>LAFONTDENFARGUES</name>
-        <value>LAFONTDENFARGUES</value>
-        <norm>numero_personas</norm>
-        </field>      <field>        <name>ELCARMEL</name>
-        <value>ELCARMEL</value>
-        <norm>numero_personas</norm>
-        </field>      <field>        <name>LATEIXONERA</name>
-        <value>LATEIXONERA</value>
-        <norm>numero_personas</norm>
-        </field>      <field>        <name>SANTGENISDELSAGUDELLS</name>
-        <value>SANTGENISDELSAGUDELLS</value>
-        <norm>numero_personas</norm>
-        </field>      <field>        <name>MONTBAU</name>
-        <value>MONTBAU</value>
-        <norm>numero_personas</norm>
-        </field>      <field>        <name>LAVALLDHEBRON</name>
-        <value>LAVALLDHEBRON</value>
-        <norm>numero_personas</norm>
-        </field>      <field>        <name>LACLOTA</name>
-        <value>LACLOTA</value>
-        <norm>numero_personas</norm>
-        </field>      <field>        <name>HORTA</name>
-        <value>HORTA</value>
-        <norm>numero_personas</norm>
-        </field>      <field>        <name>VILAPICINAILATORRELLOBETA</name>
-        <value>VILAPICINAILATORRELLOBETA</value>
-        <norm>numero_personas</norm>
-        </field>      <field>        <name>PORTA</name>
-        <value>PORTA</value>
-        <norm>numero_personas</norm>
-        </field>      <field>        <name>ELTURODELAPEIRA</name>
-        <value>ELTURODELAPEIRA</value>
-        <norm>numero_personas</norm>
-        </field>      <field>        <name>CANPEGUERA</name>
-        <value>CANPEGUERA</value>
-        <norm>numero_personas</norm>
-        </field>      <field>        <name>LAGUINEUETA</name>
-        <value>LAGUINEUETA</value>
-        <norm>numero_personas</norm>
-        </field>      <field>        <name>CANYELLES</name>
-        <value>CANYELLES</value>
-        <norm>numero_personas</norm>
-        </field>      <field>        <name>LESROQUETES</name>
-        <value>LESROQUETES</value>
-        <norm>numero_personas</norm>
-        </field>      <field>        <name>VERDUN</name>
-        <value>VERDUN</value>
-        <norm>numero_personas</norm>
-        </field>      <field>        <name>LAPROSPERITAT</name>
-        <value>LAPROSPERITAT</value>
-        <norm>numero_personas</norm>
-        </field>      <field>        <name>LATRINITATNOVA</name>
-        <value>LATRINITATNOVA</value>
-        <norm>numero_personas</norm>
-        </field>      <field>        <name>TORREBARO</name>
-        <value>TORREBARO</value>
-        <norm>numero_personas</norm>
-        </field>      <field>        <name>CIUTATMERIDIANA</name>
-        <value>CIUTATMERIDIANA</value>
-        <norm>numero_personas</norm>
-        </field>      <field>        <name>VALLBONA</name>
-        <value>VALLBONA</value>
-        <norm>numero_personas</norm>
-        </field>      <field>        <name>LATRINITATVELLA</name>
-        <value>LATRINITATVELLA</value>
-        <norm>numero_personas</norm>
-        </field>      <field>        <name>BARODEVIVER</name>
-        <value>BARODEVIVER</value>
-        <norm>numero_personas</norm>
-        </field>      <field>        <name>ELBONPASTOR</name>
-        <value>ELBONPASTOR</value>
-        <norm>numero_personas</norm>
-        </field>      <field>        <name>SANTANDREU</name>
-        <value>SANTANDREU</value>
-        <norm>numero_personas</norm>
-        </field>      <field>        <name>LASAGRERA</name>
-        <value>LASAGRERA</value>
-        <norm>numero_personas</norm>
-        </field>      <field>        <name>ELCONGRESIELSINDIANS</name>
-        <value>ELCONGRESIELSINDIANS</value>
-        <norm>numero_personas</norm>
-        </field>      <field>        <name>NAVAS</name>
-        <value>NAVAS</value>
-        <norm>numero_personas</norm>
-        </field>      <field>        <name>ELCAMPDELARPADELCLOT</name>
-        <value>ELCAMPDELARPADELCLOT</value>
-        <norm>numero_personas</norm>
-        </field>      <field>        <name>ELCLOT</name>
-        <value>ELCLOT</value>
-        <norm>numero_personas</norm>
-        </field>      <field>        <name>ELPARCILALLACUNADELPOBLENOU</name>
-        <value>ELPARCILALLACUNADELPOBLENOU</value>
-        <norm>numero_personas</norm>
-        </field>      <field>        <name>LAVILAOLIMPICADELPOBLENOU</name>
-        <value>LAVILAOLIMPICADELPOBLENOU</value>
-        <norm>numero_personas</norm>
-        </field>      <field>        <name>ELPOBLENOU</name>
-        <value>ELPOBLENOU</value>
-        <norm>numero_personas</norm>
-        </field>      <field>        <name>DIAGONALMARIELFRONTMARITIMDELPOBLENOU</name>
-        <value>DIAGONALMARIELFRONTMARITIMDELPOBLENOU</value>
-        <norm>numero_personas</norm>
-        </field>      <field>        <name>ELBESOSIELMARESME</name>
-        <value>ELBESOSIELMARESME</value>
-        <norm>numero_personas</norm>
-        </field>      <field>        <name>PROVENCALSDELPOBLENOU</name>
-        <value>PROVENCALSDELPOBLENOU</value>
-        <norm>numero_personas</norm>
-        </field>      <field>        <name>SANTMARTIDEPROVENCALS</name>
-        <value>SANTMARTIDEPROVENCALS</value>
-        <norm>numero_personas</norm>
-        </field>      <field>        <name>LAVERNEDAILAPAU</name>
-        <value>LAVERNEDAILAPAU</value>
-        <norm>numero_personas</norm>
-        </field>      <field>        <name>NOCONSTA</name>
-        <value>NOCONSTA</value>
-        <norm>numero_personas</norm>
-        </field>      </fields>     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>576</xloc>
-      <yloc>128</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>borrar DTE y BARRIS</name>
-    <type>SelectValues</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <fields>        <select_unspecified>N</select_unspecified>
-      <remove>        <name>&#xfeff;DTE</name>
-      </remove>      <remove>        <name>BARRIS</name>
-      </remove>    </fields>     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>432</xloc>
-      <yloc>128</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>borrar nombre barrio dest</name>
-    <type>SelectValues</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <fields>        <select_unspecified>N</select_unspecified>
-      <remove>        <name>typefield</name>
-      </remove>    </fields>     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>832</xloc>
-      <yloc>128</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
     <name>insert en tabla migracion_barrio</name>
     <type>TableOutput</type>
     <description/>
@@ -1734,77 +1763,6 @@
     </step>
 
   <step>
-    <name>Write to log 2</name>
-    <type>WriteToLog</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-      <loglevel>log_level_basic</loglevel>
-      <displayHeader>Y</displayHeader>
-      <limitRows>N</limitRows>
-      <limitRowsNumber>0</limitRowsNumber>
-      <logmessage/>
-    <fields>
-      <field>
-        <name>anyo</name>
-        </field>
-      <field>
-        <name>idBarrioOrigen</name>
-        </field>
-      <field>
-        <name>numero_personas</name>
-        </field>
-      <field>
-        <name>idBarrioDestino</name>
-        </field>
-      </fields>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>944</xloc>
-      <yloc>160</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>a&#xf1;adir a&#xf1;o</name>
-    <type>Constant</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <fields>
-      <field>
-        <name>anyo</name>
-        <type>Integer</type>
-        <format>0000000000000</format>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif>2014</nullif>
-        <length>4</length>
-        <precision>-1</precision>
-        <set_empty_string>N</set_empty_string>
-      </field>
-    </fields>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>192</xloc>
-      <yloc>128</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
     <name>obtener id barrio origen</name>
     <type>DBLookup</type>
     <description/>
@@ -1841,6 +1799,48 @@
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
       <xloc>304</xloc>
+      <yloc>96</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>obtener id destino</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>opendatacollector</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema/>
+      <table>barrio</table>
+      <orderby/>
+      <fail_on_multiple>Y</fail_on_multiple>
+      <eat_row_on_failure>Y</eat_row_on_failure>
+      <key>
+        <name>typefield</name>
+        <field>nombre_csv_destino</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>idBarrioDestino</rename>
+        <default/>
+        <type>None</type>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>672</xloc>
       <yloc>96</yloc>
       <draw>Y</draw>
       </GUI>
