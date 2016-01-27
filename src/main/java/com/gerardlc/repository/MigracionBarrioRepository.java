@@ -15,7 +15,7 @@ public interface MigracionBarrioRepository extends JpaRepository<MigracionBarrio
     //SELECT sum(`numero_personas`),`barrio_destino_id` FROM `migracion_barrio` GROUP BY `barrio_destino_id`
 
 
-    @Query("SELECT sum(m.numeroPersonas),m.barrioDestino from MigracionBarrio m group by m.barrioDestino")
+    @Query("SELECT sum(m.numeroPersonas),m.barrioDestino.nombre from MigracionBarrio m group by m.barrioDestino")
     List<MigracionBarrio> findAllMigrationsbyBarrioDes();
 
 }

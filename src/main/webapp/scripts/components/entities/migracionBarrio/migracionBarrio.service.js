@@ -11,13 +11,13 @@ angular.module('openDataCollectorApp')
                     return data;
                 }
             },
-            'migracionesAgrupadasBarrioDestino': {
+           /* 'migracionesAgrupadasBarrioDestino': {
                 method: 'GET',
                 transformResponse: function (data) {
                     data = angular.fromJson(data);
                     return data;
                 }
-            },
+            },*/
             'update': { method:'PUT' }
         });
     });

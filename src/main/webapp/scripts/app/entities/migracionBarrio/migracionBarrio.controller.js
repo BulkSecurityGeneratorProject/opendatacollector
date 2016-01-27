@@ -32,7 +32,7 @@ angular.module('openDataCollectorApp')
 
         $scope.data = [
             {
-                key: "Cumulative Return",
+               // key: "Cumulative Return",
                 values: [
                     {
                         "label" : "A" ,
