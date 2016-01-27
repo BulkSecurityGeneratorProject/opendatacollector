@@ -11,6 +11,7 @@ angular.module('openDataCollectorApp')
                     return data;
                 }
             },
+
             'update': { method:'PUT' }
         });
     });

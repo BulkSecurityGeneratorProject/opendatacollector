@@ -58,4 +58,18 @@
     <div class="text-center">
         <uib-pagination class="pagination-sm" total-items="totalItems" ng-model="page" ng-change="loadAll()"></uib-pagination>
     </div>
+
+
+    grafica:
+
+
+    <div >
+        <nvd3 options="options" data="data"></nvd3>
+    </div>
+
+
+    Migraciones:
+
+    {{migracionesAgrupadasBarrioDestino}}
+    {{migracionesAgrupadasBarrioDestino.barrioDestino}}
 </div>

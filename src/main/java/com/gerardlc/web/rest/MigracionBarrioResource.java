@@ -30,10 +30,10 @@ import java.util.Optional;
 public class MigracionBarrioResource {
 
     private final Logger log = LoggerFactory.getLogger(MigracionBarrioResource.class);
-        
+
     @Inject
     private MigracionBarrioRepository migracionBarrioRepository;
-    
+
     /**
      * POST  /migracionBarrios -> Create a new migracionBarrio.
      */
@@ -80,10 +80,28 @@ public class MigracionBarrioResource {
     public ResponseEntity<List<MigracionBarrio>> getAllMigracionBarrios(Pageable pageable)
         throws URISyntaxException {
         log.debug("REST request to get a page of MigracionBarrios");
-        Page<MigracionBarrio> page = migracionBarrioRepository.findAll(pageable); 
+        Page<MigracionBarrio> page = migracionBarrioRepository.findAll(pageable);
         HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/migracionBarrios");
         return new ResponseEntity<>(page.getContent(), headers, HttpStatus.OK);
     }
+
+
+    /**
+     * GET  /migracionBarrios -> get all the migracionBarrios.
+     */
+    @RequestMapping(value = "/migracionesAgrupadasBarrioDestino",
+        method = RequestMethod.GET,
+        produces = MediaType.APPLICATION_JSON_VALUE)
+    @Timed
+    public ResponseEntity<List<MigracionBarrio>> getAllMigracionBarriosGrafica()
+        throws URISyntaxException {
+        log.debug("REST request to get a page of MigracionBarrios");
+        List<MigracionBarrio> migraciones = migracionBarrioRepository.findAllMigrationsbyBarrioDes();
+        //HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/migracionBarrios");
+        return new ResponseEntity<>(migraciones, HttpStatus.OK);
+    }
+
+
 
     /**
      * GET  /migracionBarrios/:id -> get the "id" migracionBarrio.
