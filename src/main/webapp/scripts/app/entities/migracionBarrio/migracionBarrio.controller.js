@@ -1,7 +1,30 @@
 'use strict';
 
 angular.module('openDataCollectorApp')
-    .controller('MigracionBarrioController', function ($scope, $state, MigracionBarrio , ParseLinks) {
+    .controller('MigracionBarrioController', function ($scope, $http, $state, MigracionBarrio , ParseLinks) {
+
+
+        var data1 = [];
+
+        $http.get('api/migracionesAgrupadasBarrioDestino').
+        success(function(data) {
+
+            $scope.greeting = data;
+
+            for (var i = 0; i < $scope.greeting.length; i++) {
+                data1.push({
+                    label: $scope.greeting[i][1],
+                    value: $scope.greeting[i][0]
+                });
+            }
+
+        });
+
+        $scope.bpData = [{
+            values: data1
+        }];
+
+
 
         $scope.options = {
             chart: {
@@ -14,11 +37,8 @@ angular.module('openDataCollectorApp')
                     left: 55
                 },
                 x: function(d){return d.label;},
-                y: function(d){return d.value + (1e-10);},
+                y: function(d){return d.value;},
                 showValues: true,
-                valueFormat: function(d){
-                    return d3.format(',.4f')(d);
-                },
                 duration: 500,
                 xAxis: {
                     axisLabel: 'X Axis'
@@ -30,7 +50,7 @@ angular.module('openDataCollectorApp')
             }
         };
 
-        $scope.data = [
+       /* $scope.data = [
             {
                // key: "Cumulative Return",
                 values: [
@@ -69,6 +89,9 @@ angular.module('openDataCollectorApp')
                 ]
             }
         ];
+
+        console.log($scope.data);
+*/
 
         $scope.migracionBarrios = [];
         $scope.predicate = 'id';

@@ -18,6 +18,8 @@ angular.module('openDataCollectorApp')
                 },
                 resolve: {
 
+
+
                 }
             })
             .state('migracionBarrio.detail', {
