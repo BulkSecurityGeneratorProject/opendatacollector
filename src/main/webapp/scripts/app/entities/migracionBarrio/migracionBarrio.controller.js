@@ -5,8 +5,9 @@ angular.module('openDataCollectorApp')
 
 
         var data1 = [];
-
-        $http.get('api/migracionesAgrupadasBarrioDestino').
+        $scope.migraciones2="";
+        //$scope.migraciones = MigracionBarrio.migracionesTotales;
+       /* $http.get('api/migracionesAgrupadasBarrioDestino').
         success(function(data) {
 
             $scope.greeting = data;
@@ -22,9 +23,7 @@ angular.module('openDataCollectorApp')
 
         $scope.bpData = [{
             values: data1
-        }];
-
-
+        }];*/
 
         $scope.options = {
             chart: {
@@ -103,6 +102,17 @@ angular.module('openDataCollectorApp')
                 $scope.totalItems = headers('X-Total-Count');
                 $scope.migracionBarrios = result;
             });
+
+            MigracionBarrio.migracionesTotales(function(result){
+
+                $scope.migraciones2 = result;
+
+                for (var i = 0; i < $scope.migraciones2.length; i++) {
+                    data1.push({
+                        label: $scope.migraciones2[i][1],
+                        value: $scope.migraciones2[i][0]
+                    });}
+            });
         };
         $scope.loadPage = function(page) {
             $scope.page = page;
@@ -123,4 +133,13 @@ angular.module('openDataCollectorApp')
                 id: null
             };
         };
+
+
+        //cojo los valores y lo pongo en la variable para pintar en la grafica los datos
+        $scope.bpData = [{
+            values: data1
+        }];
+
+        console.log($scope.migraciones2);
+
     });

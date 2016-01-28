@@ -4,6 +4,7 @@ angular.module('openDataCollectorApp')
     .factory('MigracionBarrio', function ($resource, DateUtils) {
         return $resource('api/migracionBarrios/:id', {}, {
             'query': { method: 'GET', isArray: true},
+            'migracionesTotales': { method: 'GET', isArray: true, url: 'api/migracionesAgrupadasBarrioDestino'},
             'get': {
                 method: 'GET',
                 transformResponse: function (data) {
