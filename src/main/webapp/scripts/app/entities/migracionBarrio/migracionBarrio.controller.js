@@ -40,29 +40,29 @@ angular.module('openDataCollectorApp')
         };*/
 
 
-        $scope.options = {
-            chart: {
-                type: 'discreteBarChart',
-                height: 450,
-                margin : {
-                    top: 20,
-                    right: 20,
-                    bottom: 50,
-                    left: 55
-                },
-                x: function(d){return d.label;},
-                y: function(d){return d.value;},
-                showValues: true,
-                duration: 500,
-                xAxis: {
-                    axisLabel: 'X Axis'
-                },
-                yAxis: {
-                    axisLabel: 'Y Axis',
-                    axisLabelDistance: -10
-                }
-            }
-        };
+        //$scope.options = {
+        //    chart: {
+        //        type: 'discreteBarChart',
+        //        height: 450,
+        //        margin : {
+        //            top: 20,
+        //            right: 20,
+        //            bottom: 50,
+        //            left: 55
+        //        },
+        //        x: function(d){return d.label;},
+        //        y: function(d){return d.value;},
+        //        showValues: true,
+        //        duration: 500,
+        //        xAxis: {
+        //            axisLabel: 'X Axis'
+        //        },
+        //        yAxis: {
+        //            axisLabel: 'Y Axis',
+        //            axisLabelDistance: -10
+        //        }
+        //    }
+        //};
 
        /* $scope.data = [
             {
@@ -156,20 +156,22 @@ angular.module('openDataCollectorApp')
         }];
 
         //Regular pie chart example
-        nv.addGraph(function() {
-            var chart = nv.models.pieChart()
-                .x(function(d) { return d.label })
-                .y(function(d) { return d.value })
-                .showLabels(true)
-                .labelType("value");
+        //nv.addGraph(function() {
+        //    var chart = nv.models.pieChart()
+        //        .x(function(d) { return d.label })
+        //        .y(function(d) { return d.value })
+        //        .showLabels(true)
+        //        .labelType("value")
+        //        .donut(true);
+        //
+        //    d3.select("#chart1 svg")
+        //        .datum(exampleData1())
+        //        .transition().duration(350)
+        //        .call(chart);
+        //
+        //    return chart;
+        //});
 
-            d3.select("#chart1 svg")
-                .datum(exampleData1())
-                .transition().duration(350)
-                .call(chart);
-
-            return chart;
-        });
         function exampleData1() {
             return data1;
         }
@@ -234,9 +236,10 @@ angular.module('openDataCollectorApp')
                 .x(function(d) { return d.label })
                 .y(function(d) { return d.value })
                 //.color(colors)
+                .showLegend(false)
                 .showLabels(false)
-                .labelType("percent")
-                //.donut(true).donutRatio(0) /* Trick to make the labels go inside the chart*/
+                .labelType("value")
+                .donut(true) /* Trick to make the labels go inside the chart*/
                 ;
 
             d3.select("#chart svg")
@@ -275,9 +278,5 @@ angular.module('openDataCollectorApp')
             return chart;
         });
 
-
-
-
-        console.log($scope.migraciones2);
 
     });

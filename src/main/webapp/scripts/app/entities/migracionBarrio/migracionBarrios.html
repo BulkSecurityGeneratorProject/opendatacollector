@@ -3,8 +3,8 @@
     <jh-alert></jh-alert>
     <div class="container">
         <div class="row">
-            <div class="col-md-4">
-                <button class="btn btn-primary" ui-sref="migracionBarrio.new">
+            <div class="col-md-4 pull-right">
+                <button class="btn btn-primary btn-block" ui-sref="migracionBarrio.new">
                     <span class="glyphicon glyphicon-flash"></span> <span>Create a new MigracionBarrio</span>
                 </button>
             </div>
@@ -37,17 +37,17 @@
                     <td>
                         <button type="submit"
                                 ui-sref="migracionBarrio.detail({id:migracionBarrio.id})"
-                                class="btn btn-info btn-sm">
+                                class="btn btn-info btn-xs">
                             <span class="glyphicon glyphicon-eye-open"></span>&nbsp;<span> View</span>
                         </button>
                         <button type="submit"
                                 ui-sref="migracionBarrio.edit({id:migracionBarrio.id})"
-                                class="btn btn-primary btn-sm">
+                                class="btn btn-primary btn-xs">
                             <span class="glyphicon glyphicon-pencil"></span>&nbsp;<span> Edit</span>
                         </button>
                         <button type="submit"
                                 ui-sref="migracionBarrio.delete({id:migracionBarrio.id})"
-                                class="btn btn-danger btn-sm">
+                                class="btn btn-danger btn-xs">
                             <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span> Delete</span>
                         </button>
                     </td>
@@ -63,17 +63,12 @@
     grafica:
 
 
-    <div >
-        <nvd3 options="options" data="bpData"></nvd3>
-    </div>
+    <!--<div >-->
+        <!--<nvd3 options="options" data="bpData"></nvd3>-->
+    <!--</div>-->
 
-    <div id="chart" style="height: 1500px">
+    <div id="chart" style="height: 500px">
         <svg></svg>
     </div>
 
-
-    Migraciones:
-
-    {{migracionesAgrupadasBarrioDestino}}
-    {{migracionesAgrupadasBarrioDestino.barrioDestino}}
 </div>

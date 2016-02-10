@@ -1,0 +1,34 @@
+/*========= cabecera ===========*/
+.navbar{
+    margin:0 !important;
+    border-radius: 0!important;
+}
+#cabecera{
+    height: 415px;
+    background-color: #00b3ee;
+    background: url("../images/cabecera.jpg");
+    background-position: 0 50%;
+}
+/*========= action ===========*/
+#action{
+    background-color: #3c3c3c;
+    color: white;
+    padding: 10px 0;
+    height: 66px;
+}
+/*========= apartados central ===========*/
+#central{
+    padding: 35px 0;
+}
+/*========= footer ===========*/
+#footer{
+    padding: 15px 0;
+    background-color: #3c3c3c;
+    color: white;
+}
+
+/*========= GLOBAL ===========*/
+td button {
+    float: left;
+    border-radius: 0 !important;
+}
