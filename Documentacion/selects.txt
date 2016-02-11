@@ -1,0 +1,1 @@
+SELECT sum(`numero_personas`),`barrio_destino_id` FROM `migracion_barrio` GROUP BY `barrio_destino_id`

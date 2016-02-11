@@ -1,0 +1,6 @@
+-Crear select repository
+-Crear api
+-Service.js
+-Enrutado .js
+-Inyecta servicio al controller .controller.js
+-Pintar datos del scope en la vista .HTML
