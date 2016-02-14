@@ -5,16 +5,19 @@
 }
 #cabecera{
     height: 415px;
-    background-color: #00b3ee;
-    background: url("../images/cabecera.jpg");
-    background-position: 0 50%;
+    /* background-color: #1f487c; */
+    background: url("../images/cabecera2.jpg") #1f487c;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    text-align: center;
+    margin: 0 auto;
 }
 /*========= action ===========*/
 #action{
     background-color: #3c3c3c;
     color: white;
     padding: 10px 0;
-    height: 66px;
+    /*height: 66px;*/
 }
 /*========= apartados central ===========*/
 #central{
@@ -91,4 +94,9 @@ h2 {
 .icono .glyphicon {
     font-size: 30px;
     line-height: 80px;
+}
+
+.navbar-brand{
+    padding: 0 !important;
+
 }
