@@ -13,7 +13,6 @@
     </div>
 
 
-
     <section style="background:#efefe9;">
         <div class="container">
             <div class="row">
@@ -23,78 +22,118 @@
                         <ul class="nav nav-tabs" id="myTab">
                             <div class="liner"></div>
                             <li class="active">
-                                <a href="#home" data-toggle="tab" title="welcome">
+                                <a href="##resumen" target="_self" data-toggle="tab" title="welcome">
                       <span class="round-tabs one">
-                              <i class="glyphicon glyphicon-home"></i>
+                              <i class="glyphicon glyphicon-tasks"></i>
                       </span>
                                 </a></li>
 
-                            <li><a href="##profile"  target="_self" data-toggle="tab" title="profile">
+                            <li><a href="##datos" target="_self" data-toggle="tab" title="profile">
                      <span class="round-tabs two">
-                         <i class="glyphicon glyphicon-user"></i>
+                         <i class="glyphicon glyphicon-search"></i>
                      </span>
                             </a>
                             </li>
-                            <li><a href="#messages" data-toggle="tab" title="bootsnipp goodies">
+                            <li><a href="##descarga" target="_self" data-toggle="tab" title="bootsnipp goodies">
                      <span class="round-tabs three">
-                          <i class="glyphicon glyphicon-gift"></i>
+                          <i class="glyphicon glyphicon-download"></i>
                      </span> </a>
                             </li>
 
-                        </ul></div>
+                        </ul>
+                    </div>
 
                     <div class="tab-content">
-                        <div class="tab-pane fade in active" id="home">
+                        <div class="tab-pane fade in active" id="resumen">
 
-                            <h3 class="head text-center">Welcome to Bootsnipp<sup>™</sup> <span style="color:#f48260;">♥</span></h3>
-                            <p class="narrow text-center">
-                                Lorem ipsum dolor sit amet, his ea mollis fabellas principes. Quo mazim facilis tincidunt ut, utinam saperet facilisi an vim.
-                            </p>
+                            <h3 class="head text-center">Resumen</h3>
+                            <!--<p class="narrow text-center">-->
+                                <!--Lorem ipsum dolor sit amet, his ea mollis fabellas principes. Quo mazim facilis-->
+                                <!--tincidunt ut, utinam saperet facilisi an vim.-->
+                            <!--</p>-->
 
-                            <p class="text-center">
-                                <a href="" class="btn btn-success btn-outline-rounded green"> start using bootsnipp <span style="margin-left:10px;" class="glyphicon glyphicon-send"></span></a>
-                            </p>
-                        </div>
-                        <div class="tab-pane fade" id="profile">
-                            <h3 class="head text-center">Create a Bootsnipp<sup>™</sup> Profile</h3>
-                            <p class="narrow text-center">
-                                Lorem ipsum dolor sit amet, his ea mollis fabellas principes. Quo mazim facilis tincidunt ut, utinam saperet facilisi an vim.
-                            </p>
+                            <!--<p class="text-center">-->
+                                <!--<a href="" class="btn btn-success btn-outline-rounded green"> start using bootsnipp-->
+                                    <!--<span style="margin-left:10px;" class="glyphicon glyphicon-send"></span></a>-->
+                            <!--</p>-->
 
-                            <p class="text-center">
-                                <a href="" class="btn btn-success btn-outline-rounded green"> create your profile <span style="margin-left:10px;" class="glyphicon glyphicon-send"></span></a>
-                            </p>
-
-                        </div>
-                        <div class="tab-pane fade" id="messages">
-                            <h3 class="head text-center">Bootsnipp goodies</h3>
-                            <p class="narrow text-center">
-                                Lorem ipsum dolor sit amet, his ea mollis fabellas principes. Quo mazim facilis tincidunt ut, utinam saperet facilisi an vim.
-                            </p>
-
-                            <p class="text-center">
-                                <a href="" class="btn btn-success btn-outline-rounded green"> start using bootsnipp <span style="margin-left:10px;" class="glyphicon glyphicon-send"></span></a>
-                            </p>
-                        </div>
-                        <div class="tab-pane fade" id="settings">
-                            <h3 class="head text-center">Drop comments!</h3>
-                            <p class="narrow text-center">
-                                Lorem ipsum dolor sit amet, his ea mollis fabellas principes. Quo mazim facilis tincidunt ut, utinam saperet facilisi an vim.
-                            </p>
-
-                            <p class="text-center">
-                                <a href="" class="btn btn-success btn-outline-rounded green"> start using bootsnipp <span style="margin-left:10px;" class="glyphicon glyphicon-send"></span></a>
-                            </p>
-                        </div>
-                        <div class="tab-pane fade" id="doner">
-                            <div class="text-center">
-                                <i class="img-intro icon-checkmark-circle"></i>
+                            <div>
+                                <nvd3 options="options22" data="dataMiaData1"></nvd3>
                             </div>
-                            <h3 class="head text-center">thanks for staying tuned! <span style="color:#f48260;">♥</span> Bootstrap</h3>
-                            <p class="narrow text-center">
-                                Lorem ipsum dolor sit amet, his ea mollis fabellas principes. Quo mazim facilis tincidunt ut, utinam saperet facilisi an vim.
-                            </p>
+
                         </div>
+                        <div class="tab-pane fade" id="datos">
+
+                            <h3 class="head text-center">Tabla de datos</h3>
+
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+                                    <thead>
+                                    <tr jh-sort="predicate" ascending="reverse" callback="loadAll()">
+                                        <th jh-sort-by="id"><span>ID</span> <span
+                                            class="glyphicon glyphicon-sort"></span></th>
+                                        <th jh-sort-by="numeroPersonas"><span>NumeroPersonas</span> <span
+                                            class="glyphicon glyphicon-sort"></span></th>
+                                        <th jh-sort-by="anyo"><span>Anyo</span> <span
+                                            class="glyphicon glyphicon-sort"></span></th>
+                                        <th jh-sort-by="barrioOrigen.nombre"><span>barrioOrigen</span> <span
+                                            class="glyphicon glyphicon-sort"></span></th>
+                                        <th jh-sort-by="barrioDestino.nombre"><span>barrioDestino</span> <span
+                                            class="glyphicon glyphicon-sort"></span></th>
+                                        <th></th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr ng-repeat="migracionBarrio in migracionBarrios track by migracionBarrio.id">
+                                        <td><a ui-sref="migracionBarrio.detail({id:migracionBarrio.id})">{{migracionBarrio.id}}</a>
+                                        </td>
+                                        <td>{{migracionBarrio.numeroPersonas}}</td>
+                                        <td>{{migracionBarrio.anyo}}</td>
+                                        <td>
+                                            <a ui-sref="barrio.detail({id:migracionBarrio.barrioOrigen.id})">{{migracionBarrio.barrioOrigen.nombre}}</a>
+                                        </td>
+                                        <td>
+                                            <a ui-sref="barrio.detail({id:migracionBarrio.barrioDestino.id})">{{migracionBarrio.barrioDestino.nombre}}</a>
+                                        </td>
+                                        <td>
+                                            <button type="submit"
+                                                    ui-sref="migracionBarrio.detail({id:migracionBarrio.id})"
+                                                    class="btn btn-info btn-xs">
+                                                <span
+                                                    class="glyphicon glyphicon-eye-open"></span>&nbsp;<span> View</span>
+                                            </button>
+                                            <button type="submit"
+                                                    ui-sref="migracionBarrio.edit({id:migracionBarrio.id})"
+                                                    class="btn btn-primary btn-xs">
+                                                <span class="glyphicon glyphicon-pencil"></span>&nbsp;<span> Edit</span>
+                                            </button>
+                                            <button type="submit"
+                                                    ui-sref="migracionBarrio.delete({id:migracionBarrio.id})"
+                                                    class="btn btn-danger btn-xs">
+                                                <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span> Delete</span>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="text-center">
+                                <uib-pagination class="pagination-sm" total-items="totalItems" ng-model="page"
+                                                ng-change="loadAll()"></uib-pagination>
+                            </div>
+
+
+                        </div>
+                        <div class="tab-pane fade" id="descarga">
+                            <h3 class="head text-center">Descarga de ficheros</h3>
+                            <ul>
+                                <li><a href="#">Cambios-de-domicilio2014.csv</a></li>
+                                <li><a href="#">Cambios-de-domicilio2013.csv</a></li>
+                                <li><a href="#">Cambios-de-domicilio2012.csv</a></li>
+                                <li><a href="#">Cambios-de-domicilio2011.csv</a></li>
+                            </ul>
+                        </div>
+                        <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
                         <div class="clearfix"></div>
                     </div>
 
@@ -104,64 +143,57 @@
     </section>
 
 
+    <!--<div class="table-responsive">-->
+    <!--<table class="table table-striped">-->
+    <!--<thead>-->
+    <!--<tr jh-sort="predicate" ascending="reverse" callback="loadAll()">-->
+    <!--<th jh-sort-by="id"><span>ID</span> <span class="glyphicon glyphicon-sort"></span></th>-->
+    <!--<th jh-sort-by="numeroPersonas"><span>NumeroPersonas</span> <span class="glyphicon glyphicon-sort"></span></th>-->
+    <!--<th jh-sort-by="anyo"><span>Anyo</span> <span class="glyphicon glyphicon-sort"></span></th>-->
+    <!--<th jh-sort-by="barrioOrigen.nombre"><span>barrioOrigen</span> <span class="glyphicon glyphicon-sort"></span></th>-->
+    <!--<th jh-sort-by="barrioDestino.nombre"><span>barrioDestino</span> <span class="glyphicon glyphicon-sort"></span></th>-->
+    <!--<th></th>-->
+    <!--</tr>-->
+    <!--</thead>-->
+    <!--<tbody>-->
+    <!--<tr ng-repeat="migracionBarrio in migracionBarrios track by migracionBarrio.id">-->
+    <!--<td><a ui-sref="migracionBarrio.detail({id:migracionBarrio.id})">{{migracionBarrio.id}}</a></td>-->
+    <!--<td>{{migracionBarrio.numeroPersonas}}</td>-->
+    <!--<td>{{migracionBarrio.anyo}}</td>-->
+    <!--<td>-->
+    <!--<a ui-sref="barrio.detail({id:migracionBarrio.barrioOrigen.id})">{{migracionBarrio.barrioOrigen.nombre}}</a>-->
+    <!--</td>-->
+    <!--<td>-->
+    <!--<a ui-sref="barrio.detail({id:migracionBarrio.barrioDestino.id})">{{migracionBarrio.barrioDestino.nombre}}</a>-->
+    <!--</td>-->
+    <!--<td>-->
+    <!--<button type="submit"-->
+    <!--ui-sref="migracionBarrio.detail({id:migracionBarrio.id})"-->
+    <!--class="btn btn-info btn-xs">-->
+    <!--<span class="glyphicon glyphicon-eye-open"></span>&nbsp;<span> View</span>-->
+    <!--</button>-->
+    <!--<button type="submit"-->
+    <!--ui-sref="migracionBarrio.edit({id:migracionBarrio.id})"-->
+    <!--class="btn btn-primary btn-xs">-->
+    <!--<span class="glyphicon glyphicon-pencil"></span>&nbsp;<span> Edit</span>-->
+    <!--</button>-->
+    <!--<button type="submit"-->
+    <!--ui-sref="migracionBarrio.delete({id:migracionBarrio.id})"-->
+    <!--class="btn btn-danger btn-xs">-->
+    <!--<span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span> Delete</span>-->
+    <!--</button>-->
+    <!--</td>-->
+    <!--</tr>-->
+    <!--</tbody>-->
+    <!--</table>-->
+    <!--</div>-->
+    <!--<div class="text-center">-->
+    <!--<uib-pagination class="pagination-sm" total-items="totalItems" ng-model="page" ng-change="loadAll()"></uib-pagination>-->
+    <!--</div>-->
 
-
-
-
-    <div class="table-responsive">
-        <table class="table table-striped">
-            <thead>
-                <tr jh-sort="predicate" ascending="reverse" callback="loadAll()">
-                    <th jh-sort-by="id"><span>ID</span> <span class="glyphicon glyphicon-sort"></span></th>
-                    <th jh-sort-by="numeroPersonas"><span>NumeroPersonas</span> <span class="glyphicon glyphicon-sort"></span></th>
-                    <th jh-sort-by="anyo"><span>Anyo</span> <span class="glyphicon glyphicon-sort"></span></th>
-                    <th jh-sort-by="barrioOrigen.nombre"><span>barrioOrigen</span> <span class="glyphicon glyphicon-sort"></span></th>
-                    <th jh-sort-by="barrioDestino.nombre"><span>barrioDestino</span> <span class="glyphicon glyphicon-sort"></span></th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr ng-repeat="migracionBarrio in migracionBarrios track by migracionBarrio.id">
-                    <td><a ui-sref="migracionBarrio.detail({id:migracionBarrio.id})">{{migracionBarrio.id}}</a></td>
-                    <td>{{migracionBarrio.numeroPersonas}}</td>
-                    <td>{{migracionBarrio.anyo}}</td>
-                    <td>
-                        <a ui-sref="barrio.detail({id:migracionBarrio.barrioOrigen.id})">{{migracionBarrio.barrioOrigen.nombre}}</a>
-                    </td>
-                    <td>
-                        <a ui-sref="barrio.detail({id:migracionBarrio.barrioDestino.id})">{{migracionBarrio.barrioDestino.nombre}}</a>
-                    </td>
-                    <td>
-                        <button type="submit"
-                                ui-sref="migracionBarrio.detail({id:migracionBarrio.id})"
-                                class="btn btn-info btn-xs">
-                            <span class="glyphicon glyphicon-eye-open"></span>&nbsp;<span> View</span>
-                        </button>
-                        <button type="submit"
-                                ui-sref="migracionBarrio.edit({id:migracionBarrio.id})"
-                                class="btn btn-primary btn-xs">
-                            <span class="glyphicon glyphicon-pencil"></span>&nbsp;<span> Edit</span>
-                        </button>
-                        <button type="submit"
-                                ui-sref="migracionBarrio.delete({id:migracionBarrio.id})"
-                                class="btn btn-danger btn-xs">
-                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span> Delete</span>
-                        </button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <div class="text-center">
-        <uib-pagination class="pagination-sm" total-items="totalItems" ng-model="page" ng-change="loadAll()"></uib-pagination>
-    </div>
-
-
-
-
-    <div >
-        <nvd3 options="options22" data="dataMiaData1"></nvd3>
-    </div>
+    <!--<div >-->
+    <!--<nvd3 options="options22" data="dataMiaData1"></nvd3>-->
+    <!--</div>-->
 
 
 </div>

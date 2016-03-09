@@ -206,9 +206,9 @@ ul#strengthBar {
 @import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700);
 /* written by riliwan balogun http://www.facebook.com/riliwan.rabo*/
 .board{
-    width: 75%;
-    margin: 60px auto;
-    height: 500px;
+    /*width: 75%;*/
+    /*margin: 60px auto;*/
+    /*height: 500px;*/
     background: #fff;
     /*box-shadow: 10px 10px #ccc,-10px 20px #ddd;*/
 }
@@ -216,15 +216,15 @@ ul#strengthBar {
     position: relative;
     border-bottom: 0;
     width: 80%;
-    margin: 40px auto;
+    margin: 0px auto;
     margin-bottom: 0;
     box-sizing: border-box;
 
 }
 
 .board > div.board-inner{
-    background: #fafafa url(http://subtlepatterns.com/patterns/geometry2.png);
-    background-size: 30%;
+    /*background: #fafafa url(http://subtlepatterns.com/patterns/geometry2.png);*/
+    /*background-size: 30%;*/
     border-bottom: 1px solid #DDD;
 }
 
@@ -351,7 +351,7 @@ li:after {
     transition:0.1s ease-in-out;
 
 }
-li.active:after {
+.board-inner li.active:after {
     content: " ";
     position: absolute;
     left: 45%;

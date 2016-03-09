@@ -2,6 +2,8 @@
 .navbar{
     margin:0 !important;
     border-radius: 0!important;
+    background-color: white;
+    border: none;
 }
 #cabecera{
     height: 415px;
@@ -58,6 +60,17 @@
 }
 
 /*========= GLOBAL ===========*/
+.navbar-default .navbar-nav>li>a{
+    color: #325D88;
+}
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus{
+    color: #5CA3EA;
+}
+.navbar .nav>li>a{
+    font-weight: bold;
+    font-family: Arial,sans-serif;
+}
+
 td button {
     float: left;
     border-radius: 0 !important;
